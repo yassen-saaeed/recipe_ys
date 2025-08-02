@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Yassen</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700&family=Amiri&display=swap');
+  p, li {
+    font-family: 'Amiri', serif;
+  }
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Chef <span>Yassen's</span> Recipes</h1>
+            <p>ورقه وقلم وأكتبي معايا يا ست الكل</p>
+        </div>
+
+        <div class="controls">
+            <div class="search-container">
+                <button class="search-btn" id="searchBtn"><img src="search.svg" alt="search-icon"> </button>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search for meals...">
+                
+            </div>
+            <select class="category-select" id="categorySelect">
+                <option value="">Select a category</option>
+            </select>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading delicious recipes...</p>
+        </div>
+
+        <div id="mealsContainer" class="meals-grid"></div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>No recipes found</h3>
+            <p>Try searching for something else or select a different category</p>
+        </div>
+    </div>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="recipeContent"></div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
